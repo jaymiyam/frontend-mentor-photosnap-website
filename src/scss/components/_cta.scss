@@ -5,6 +5,9 @@
   position: relative;
   padding-block: 4.5rem;
   background-image: url('/images/shared/desktop/bg-beta.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   color: $color-white;
 
   .container {
