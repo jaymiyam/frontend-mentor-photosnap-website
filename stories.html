@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/frontend-mentor-photosnap-website/favicon-32x32.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <title>Photosnap | Create And Share Your Photo Stories.</title>
+    <script type="module" crossorigin src="/frontend-mentor-photosnap-website/assets/main-4n85CSfs.js"></script>
+    <link rel="stylesheet" crossorigin href="/frontend-mentor-photosnap-website/assets/main-B3EftSFE.css">
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <a href="/index.html">
+            <img src="/frontend-mentor-photosnap-website/images/shared/desktop/logo.svg" alt="Photosnap" />
+          </a>
+          <button
+            type="button"
+            class="mobile-nav-toggle"
+            aria-controls="navigation"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Menu</span>
+          </button>
+          <nav class="navigation">
+            <ul role="list">
+              <li>
+                <a
+                  href="/stories.html"
+                  class="button button--text button--text-black"
+                  ><span>Stories</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="/features.html"
+                  class="button button--text button--text-black"
+                  ><span>Features</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="/pricing.html"
+                  class="button button--text button--text-black"
+                >
+                  <span>Pricing</span></a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div class="header__wrapper__cta">
+            <a href="#" class="button button--bg button--bg-black"
+              >Get an invite</a
+            >
+          </div>
+          <!-- mobile navigation -->
+          <div class="mobile-navigation__wrapper">
+            <nav class="mobile-navigation">
+              <ul role="list">
+                <li>
+                  <a
+                    href="/stories.html"
+                    class="button button--text button--text-black"
+                    >Stories</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/features.html"
+                    class="button button--text button--text-black"
+                    >features</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/pricing.html"
+                    class="button button--text button--text-black"
+                  >
+                    Pricing</a
+                  >
+                </li>
+              </ul>
+              <hr class="mobile-navigation__divider" />
+              <div>
+                <a href="#" class="button button--bg button--bg-black"
+                  >Get an invite</a
+                >
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- mobile nav overlay -->
+    <div class="overlay" hidden></div>
+    <main>
+      <!-- stories hero section -->
+      <section class="stories-hero">
+        <div class="stories-hero__mobile-image">
+          <img
+            src="/frontend-mentor-photosnap-website/images/stories/mobile/moon-of-appalacia.jpg"
+            alt="moon of appalacia"
+          />
+        </div>
+        <div class="stories-hero__text">
+          <h2 class="xs-heading xs-heading__uppercase">
+            Last month's features story
+          </h2>
+          <h1 class="large-heading">Hazy full moon of Appalacia</h1>
+          <small>
+            <span class="stories-hero__text__date">March 2nd 2020</span
+            ><span>by John Appleseed</span>
+          </small>
+          <p>
+            The dissected plateau area, while not actually made up of geological
+            mountains, is popularly called "mountains," especially in eastern
+            Kentucky and West Virginia, and while the ridges are not high, the
+            terrain is extremely rugged.
+          </p>
+          <a href="#" class="button button--text button--text-white">
+            <span>Read the story</span>
+            <img
+              class="button__arrow"
+              src="/frontend-mentor-photosnap-website/images/shared/desktop/arrow-white.svg"
+              alt=""
+            />
+          </a>
+        </div>
+      </section>
+
+      <!-- story cards section -->
+      <section class="home-stories">
+        <div class="story-card">
+          <img
+            src="/frontend-mentor-photosnap-website/images/stories/desktop/mountains.jpg"
+            alt="the mountains"
+            class="story-card__image"
+          />
+          <div class="story-card__text">
+            <small class="story-card__date">April 16th 2020</small>
+            <h3 class="small-heading">The Monutains</h3>
+            <small class="story-card__author">by John Appleseed</small>
+            <hr class="story-card__divider" />
+            <a
+              href="#"
+              class="story-card__link | button button--text button--text-white"
+            >
+              <span>Read story</span>
+              <img src="/frontend-mentor-photosnap-website/images/shared/desktop/arrow-white.svg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="story-card">
+          <img
+            src="/frontend-mentor-photosnap-website/images/stories/desktop/cityscapes.jpg"
+            alt="sunset cityscapes"
+            class="story-card__image"
+          />
+          <div class="story-card__text">
+            <small class="story-card__date">April 20th 2020</small>
+            <h3 class="small-heading">Sunset Cityscapes</h3>
+            <small class="story-card__author">by Benjamin Cruz</small>
+            <hr class="story-card__divider" />
+            <a
+              href="#"
+              class="story-card__link | button button--text button--text-white"
+            >
+              <span>Read story</span>
+              <img src="/frontend-mentor-photosnap-website/images/shared/desktop/arrow-white.svg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="story-card">
+          <img
+            src="/frontend-mentor-photosnap-website/images/stories/desktop/18-days-voyage.jpg"
+            alt="18 days voyage"
+            class="story-card__image"
+          />
+          <div class="story-card__text">
+            <small class="story-card__date">April 14th 2020</small>
+            <h3 class="small-heading">18 Days Voyage</h3>
+            <small class="story-card__author">by Alexie Borodin</small>
+            <hr class="story-card__divider" />
+            <a
+              href="#"
+              class="story-card__link | button button--text button--text-white"
+            >
+              <span>Read story</span>
+              <img src="/frontend-mentor-photosnap-website/images/shared/desktop/arrow-white.svg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="story-card">
+          <img
+            src="/frontend-mentor-photosnap-website/images/stories/desktop/architecturals.jpg"
+            alt="the architecturals"
+            class="story-card__image"
+          />
+          <div class="story-card__text">
+            <small class="story-card__date">April 9th 2020</small>
+            <h3 class="small-heading">Architecurals</h3>
+            <small class="story-card__author">by Samantha Brooke</small>
+            <hr class="story-card__divider" />
+            <a
+              href="#"
+              class="story-card__link | button button--text button--text-white"
+            >
+              <span>Read story</span>
+              <img src="/frontend-mentor-photosnap-website/images/shared/desktop/arrow-white.svg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="story-card">
+          <img
+            src="/frontend-mentor-photosnap-website/images/stories/desktop/world-tour.jpg"
+            alt="world tour 2019"
+            class="story-card__image"
+          />
+          <div class="story-card__text">
+            <small class="story-card__date">December 16th 2019</small>
+            <h3 class="small-heading">World Tour 2019</h3>
+            <small class="story-card__author">by Timothy Wagner</small>
+            <hr class="story-card__divider" />
+            <a
+              href="#"
+              class="story-card__link | button button--text button--text-white"
+            >
+              <span>Read story</span>
+              <img src="/frontend-mentor-photosnap-website/images/shared/desktop/arrow-white.svg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="story-card">
+          <img
+            src="/frontend-mentor-photosnap-website/images/stories/desktop/unforeseen-corners.jpg"
+            alt="unforeseen corners"
+            class="story-card__image"
+          />
+          <div class="story-card__text">
+            <small class="story-card__date">April 20th 2020</small>
+            <h3 class="small-heading">Unforseen Corners</h3>
+            <small class="story-card__author">by William Malcolm</small>
+            <hr class="story-card__divider" />
+            <a
+              href="#"
+              class="story-card__link | button button--text button--text-white"
+            >
+              <span>Read story</span>
+              <img src="/frontend-mentor-photosnap-website/images/shared/desktop/arrow-white.svg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="story-card">
+          <img
+            src="/frontend-mentor-photosnap-website/images/stories/desktop/king-on-africa.jpg"
+            alt="king of africa"
+            class="story-card__image"
+          />
+          <div class="story-card__text">
+            <small class="story-card__date">June 14th 2019</small>
+            <h3 class="small-heading">King of Africa: Part II</h3>
+            <small class="story-card__author">by Tim Smith</small>
+            <hr class="story-card__divider" />
+            <a
+              href="#"
+              class="story-card__link | button button--text button--text-white"
+            >
+              <span>Read story</span>
+              <img src="/frontend-mentor-photosnap-website/images/shared/desktop/arrow-white.svg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="story-card">
+          <img
+            src="/frontend-mentor-photosnap-website/images/stories/desktop/trip-to-nowhere.jpg"
+            alt="trip to nowhere"
+            class="story-card__image"
+          />
+          <div class="story-card__text">
+            <small class="story-card__date">May 9th 2020</small>
+            <h3 class="small-heading">The Trip To Nowhere</h3>
+            <small class="story-card__author">by Jonathan Brooke</small>
+            <hr class="story-card__divider" />
+            <a
+              href="#"
+              class="story-card__link | button button--text button--text-white"
+            >
+              <span>Read story</span>
+              <img src="/frontend-mentor-photosnap-website/images/shared/desktop/arrow-white.svg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="story-card">
+          <img
+            src="/frontend-mentor-photosnap-website/images/stories/desktop/rage-of-the-sea.jpg"
+            alt="rage of the sea"
+            class="story-card__image"
+          />
+          <div class="story-card__text">
+            <small class="story-card__date">Setemper 25th 2019</small>
+            <h3 class="small-heading">Rage of The Sea</h3>
+            <small class="story-card__author">by Mary Kimberly</small>
+            <hr class="story-card__divider" />
+            <a
+              href="#"
+              class="story-card__link | button button--text button--text-white"
+            >
+              <span>Read story</span>
+              <img src="/frontend-mentor-photosnap-website/images/shared/desktop/arrow-white.svg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="story-card">
+          <img
+            src="/frontend-mentor-photosnap-website/images/stories/desktop/running-free.jpg"
+            alt="unforeseen corners"
+            class="story-card__image"
+          />
+          <div class="story-card__text">
+            <small class="story-card__date">April 20th 2020</small>
+            <h3 class="small-heading">Running Free</h3>
+            <small class="story-card__author">by Michael Kim</small>
+            <hr class="story-card__divider" />
+            <a
+              href="#"
+              class="story-card__link | button button--text button--text-white"
+            >
+              <span>Read story</span>
+              <img src="/frontend-mentor-photosnap-website/images/shared/desktop/arrow-white.svg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="story-card">
+          <img
+            src="/frontend-mentor-photosnap-website/images/stories/desktop/behind-the-waves.jpg"
+            alt="behind the waves"
+            class="story-card__image"
+          />
+          <div class="story-card__text">
+            <small class="story-card__date">January 30th 2019</small>
+            <h3 class="small-heading">Behind The Waves</h3>
+            <small class="story-card__author">by Lamar Wilson</small>
+            <hr class="story-card__divider" />
+            <a
+              href="#"
+              class="story-card__link | button button--text button--text-white"
+            >
+              <span>Read story</span>
+              <img src="/frontend-mentor-photosnap-website/images/shared/desktop/arrow-white.svg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="story-card">
+          <img
+            src="/frontend-mentor-photosnap-website/images/stories/desktop/calm-waters.jpg"
+            alt="calm waters"
+            class="story-card__image"
+          />
+          <div class="story-card__text">
+            <small class="story-card__date">August 22th 2020</small>
+            <h3 class="small-heading">Calm Waters</h3>
+            <small class="story-card__author">by Jonathan Brooke</small>
+            <hr class="story-card__divider" />
+            <a
+              href="#"
+              class="story-card__link | button button--text button--text-white"
+            >
+              <span>Read story</span>
+              <img src="/frontend-mentor-photosnap-website/images/shared/desktop/arrow-white.svg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="story-card">
+          <img
+            src="/frontend-mentor-photosnap-website/images/stories/desktop/milky-way.jpg"
+            alt="milky way"
+            class="story-card__image"
+          />
+          <div class="story-card__text">
+            <small class="story-card__date">November 26th 2020</small>
+            <h3 class="small-heading">The Milky Way</h3>
+            <small class="story-card__author">by Aaron Chia</small>
+            <hr class="story-card__divider" />
+            <a
+              href="#"
+              class="story-card__link | button button--text button--text-white"
+            >
+              <span>Read story</span>
+              <img src="/frontend-mentor-photosnap-website/images/shared/desktop/arrow-white.svg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="story-card">
+          <img
+            src="/frontend-mentor-photosnap-website/images/stories/desktop/dark-forest.jpg"
+            alt="unforeseen corners"
+            class="story-card__image"
+          />
+          <div class="story-card__text">
+            <small class="story-card__date">October 3th 2020</small>
+            <h3 class="small-heading">Night Of The Dark Forest</h3>
+            <small class="story-card__author">by Leah Patricks</small>
+            <hr class="story-card__divider" />
+            <a
+              href="#"
+              class="story-card__link | button button--text button--text-white"
+            >
+              <span>Read story</span>
+              <img src="/frontend-mentor-photosnap-website/images/shared/desktop/arrow-white.svg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="story-card">
+          <img
+            src="/frontend-mentor-photosnap-website/images/stories/desktop/somwarpet.jpg"
+            alt="somwarpet's beauty"
+            class="story-card__image"
+          />
+          <div class="story-card__text">
+            <small class="story-card__date">April 11th 2020</small>
+            <h3 class="small-heading">Somwarpet's Beauty</h3>
+            <small class="story-card__author">by Lebron James</small>
+            <hr class="story-card__divider" />
+            <a
+              href="#"
+              class="story-card__link | button button--text button--text-white"
+            >
+              <span>Read story</span>
+              <img src="/frontend-mentor-photosnap-website/images/shared/desktop/arrow-white.svg" alt="" />
+            </a>
+          </div>
+        </div>
+        <div class="story-card">
+          <img
+            src="/frontend-mentor-photosnap-website/images/stories/desktop/land-of-dreams.jpg"
+            alt="land of dreams"
+            class="story-card__image"
+          />
+          <div class="story-card__text">
+            <small class="story-card__date">February 28th 2020</small>
+            <h3 class="small-heading">Land Of Dreams</h3>
+            <small class="story-card__author">by Samantha Brooke</small>
+            <hr class="story-card__divider" />
+            <a
+              href="#"
+              class="story-card__link | button button--text button--text-white"
+            >
+              <span>Read story</span>
+              <img src="/frontend-mentor-photosnap-website/images/shared/desktop/arrow-white.svg" alt="" />
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- footer -->
+    <footer class="footer">
+      <div class="container | footer__container">
+        <a href="/index.html" class="footer__logo">
+          <img src="/frontend-mentor-photosnap-website/images/shared/desktop/logo-white.svg" alt="Photosnap" />
+        </a>
+        <ul role="list" class="footer__socials">
+          <li>
+            <a href="#">
+              <img src="/frontend-mentor-photosnap-website/images/shared/desktop/facebook.svg" alt="facebook" />
+              <span class="sr-only">facebbok</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/frontend-mentor-photosnap-website/images/shared/desktop/youtube.svg" alt="youtube" />
+              <span class="sr-only">youtube</span>
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="/frontend-mentor-photosnap-website/images/shared/desktop/twitter.svg" alt="twitter" />
+              <span class="sr-only">twitter</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="/frontend-mentor-photosnap-website/images/shared/desktop/pinterest.svg"
+                alt="pinterest"
+              />
+              <span class="sr-only">pinterest</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="/frontend-mentor-photosnap-website/images/shared/desktop/instagram.svg"
+                alt="instagram"
+              />
+              <span class="sr-only">instagram</span></a
+            >
+          </li>
+        </ul>
+        <nav class="footer__navigation">
+          <ul role="list">
+            <li>
+              <a
+                href="/index.html"
+                class="button button--text button--text-white"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="/stories.html"
+                class="button button--text button--text-white"
+                >Stories</a
+              >
+            </li>
+            <li>
+              <a
+                href="/features.html"
+                class="button button--text button--text-white"
+                >features</a
+              >
+            </li>
+            <li>
+              <a
+                href="/pricing.html"
+                class="button button--text button--text-white"
+              >
+                Pricing</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <a
+          href="#"
+          class="footer__cta | button button--text button--text-white"
+        >
+          <span>Get an invite</span>
+          <img src="/frontend-mentor-photosnap-website/images/shared/desktop/arrow-white.svg" alt="" />
+        </a>
+
+        <p class="footer__copyright">
+          <small>Copyright 2019. All Rights Reserved</small>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
