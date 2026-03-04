@@ -1,3 +1,6 @@
+// import scss
+import './scss/main.scss';
+
 // mobile nav interactions
 const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
 const mobileNav = document.querySelector('.mobile-navigation__wrapper');
