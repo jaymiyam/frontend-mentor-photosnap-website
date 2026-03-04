@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="/images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/scss/main.scss" />
+    <script src="src/main.js" defer></script>
+    <script src="src/pricing.js" defer></script>
+    <title>Photosnap | Create And Share Your Photo Stories.</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <a href="/index.html">
+            <img src="/images/shared/desktop/logo.svg" alt="Photosnap" />
+          </a>
+          <button
+            type="button"
+            class="mobile-nav-toggle"
+            aria-controls="navigation"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Menu</span>
+          </button>
+          <nav class="navigation">
+            <ul role="list">
+              <li>
+                <a
+                  href="/stories.html"
+                  class="button button--text button--text-black"
+                  ><span>Stories</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="/features.html"
+                  class="button button--text button--text-black"
+                  ><span>Features</span></a
+                >
+              </li>
+              <li>
+                <a
+                  href="/pricing.html"
+                  class="button button--text button--text-black"
+                >
+                  <span>Pricing</span></a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div class="header__wrapper__cta">
+            <a href="#" class="button button--bg button--bg-black"
+              >Get an invite</a
+            >
+          </div>
+          <!-- mobile navigation -->
+          <div class="mobile-navigation__wrapper">
+            <nav class="mobile-navigation">
+              <ul role="list">
+                <li>
+                  <a
+                    href="/stories.html"
+                    class="button button--text button--text-black"
+                    >Stories</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/features.html"
+                    class="button button--text button--text-black"
+                    >features</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="/pricing.html"
+                    class="button button--text button--text-black"
+                  >
+                    Pricing</a
+                  >
+                </li>
+              </ul>
+              <hr class="mobile-navigation__divider" />
+              <div>
+                <a href="#" class="button button--bg button--bg-black"
+                  >Get an invite</a
+                >
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- mobile nav overlay -->
+    <div class="overlay" hidden></div>
+    <main>
+      <!-- hero sections -->
+      <section class="section section--hero">
+        <div class="section__text section__text--hero">
+          <h1 class="large-heading">Pricing</h1>
+          <p>
+            Create a your stories, Photosnap is a platform for photographers and
+            visual storytellers. It’s the simple way to create and share your
+            photos.
+          </p>
+        </div>
+        <div class="section__image">
+          <picture>
+            <source
+              srcset="/images/pricing/mobile/hero.jpg"
+              media="(width <= 640px)"
+            />
+            <source
+              srcset="/images/pricing/tablet/hero.jpg"
+              media="(width <= 1024px)"
+            />
+            <img src="/images/pricing/desktop/hero.jpg" alt="pricing" />
+          </picture>
+        </div>
+      </section>
+
+      <!-- pricing section -->
+      <section class="plans">
+        <div class="container">
+          <!-- plans toggle button -->
+          <div class="toggle__wrapper">
+            <span class="toggle__text | small-heading">Monthly</span>
+            <button class="toggle" type="button" aria-pressed="false">
+              <span class="toggle__track">
+                <span class="toggle__thumb"></span>
+              </span>
+              <span class="sr-only">Toggle Yearly Billing</span>
+            </button>
+            <span class="toggle__text | small-heading">Yearly</span>
+          </div>
+
+          <!-- price cards -->
+          <div class="cards-wrapper">
+            <div class="price-card">
+              <div>
+                <h3 class="medium-heading">Basic</h3>
+                <p>
+                  Includes basic usage of our platform. Recommended for new and
+                  aspiring photographers.
+                </p>
+              </div>
+              <div class="price-card__price">
+                <span
+                  class="price-card__price-text | large-heading"
+                  id="price-basic"
+                  >$19.00</span
+                >
+                <small>per month</small>
+              </div>
+              <button class="button button--bg button--bg-black">
+                Pick Plan
+              </button>
+            </div>
+            <div class="price-card price-card--pro">
+              <div>
+                <h3 class="medium-heading">Pro</h3>
+                <p>
+                  More advanced features available. Recommended for photography
+                  veterans and professionals.
+                </p>
+              </div>
+              <div class="price-card__price">
+                <span
+                  class="price-card__price-text | large-heading"
+                  id="price-pro"
+                  >$39.00</span
+                >
+                <small>per month</small>
+              </div>
+              <button class="button button--bg button--bg-white">
+                Pick Plan
+              </button>
+            </div>
+            <div class="price-card">
+              <div>
+                <h3 class="medium-heading">Business</h3>
+                <p>
+                  Additional features available such as more detailed metrics.
+                  Recommended for business owners.
+                </p>
+              </div>
+              <div class="price-card__price">
+                <span
+                  class="price-card__price-text | large-heading"
+                  id="price-business"
+                  >$99.00</span
+                >
+                <small>per month</small>
+              </div>
+              <button class="button button--bg button--bg-black">
+                Pick Plan
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- comparison table section -->
+      <section class="compare">
+        <div class="container">
+          <h2 class="large-heading">Compare</h2>
+
+          <!-- desktop table -->
+          <table class="table">
+            <thead>
+              <tr>
+                <th class="table__index-column | xs-heading">The Features</th>
+                <th class="xs-heading">Basic</th>
+                <th class="xs-heading">Pro</th>
+                <th class="xs-heading">Business</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="table__feature | xs-heading">
+                  Unlimited Story Posting
+                </td>
+                <td class="table__checked">
+                  <span class="sr-only">checked</span>
+                </td>
+                <td class="table__checked">
+                  <span class="sr-only">checked</span>
+                </td>
+                <td class="table__checked">
+                  <span class="sr-only">checked</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="table__feature | xs-heading">
+                  Unlimited Photo Upload
+                </td>
+                <td class="table__checked">
+                  <span class="sr-only">checked</span>
+                </td>
+                <td class="table__checked">
+                  <span class="sr-only">checked</span>
+                </td>
+                <td class="table__checked">
+                  <span class="sr-only">checked</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="table__feature | xs-heading">
+                  Embedding Custom Content
+                </td>
+                <td></td>
+                <td class="table__checked">
+                  <span class="sr-only">checked</span>
+                </td>
+                <td class="table__checked">
+                  <span class="sr-only">checked</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="table__feature | xs-heading">Customize Metadata</td>
+                <td></td>
+                <td class="table__checked">
+                  <span class="sr-only">checked</span>
+                </td>
+                <td class="table__checked">
+                  <span class="sr-only">checked</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="table__feature | xs-heading">Advanced Metrics</td>
+                <td></td>
+                <td></td>
+                <td class="table__checked">
+                  <span class="sr-only">checked</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="table__feature | xs-heading">Photo Downloads</td>
+                <td></td>
+                <td></td>
+                <td class="table__checked">
+                  <span class="sr-only">checked</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="table__feature | xs-heading">
+                  Search Engine Indexing
+                </td>
+                <td></td>
+                <td></td>
+                <td class="table__checked">
+                  <span class="sr-only">checked</span>
+                </td>
+              </tr>
+              <tr>
+                <td class="table__feature | xs-heading">Custom Analytics</td>
+                <td></td>
+                <td></td>
+                <td class="table__checked">
+                  <span class="sr-only">checked</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- mobile table -->
+          <div class="mobile-table">
+            <div class="mobile-table__head">
+              <h3 class="xs-heading">Basic</h3>
+              <h3 class="xs-heading">Pro</h3>
+              <h3 class="xs-heading">Business</h3>
+            </div>
+            <div class="mobile-table__body">
+              <div class="mobile-table__row">
+                <h3 class="mobile-table__feature | xs-heading">
+                  Unlimited Story Posting
+                </h3>
+                <div class="mobile-table__data">
+                  <div class="mobile-table__checked">
+                    <span class="sr-only">checked</span>
+                  </div>
+                  <div class="mobile-table__checked">
+                    <span class="sr-only">checked</span>
+                  </div>
+                  <div class="mobile-table__checked">
+                    <span class="sr-only">checked</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mobile-table__row">
+                <h3 class="mobile-table__feature | xs-heading">
+                  Unlimited Photo Upload
+                </h3>
+                <div class="mobile-table__data">
+                  <div class="mobile-table__checked">
+                    <span class="sr-only">checked</span>
+                  </div>
+                  <div class="mobile-table__checked">
+                    <span class="sr-only">checked</span>
+                  </div>
+                  <div class="mobile-table__checked">
+                    <span class="sr-only">checked</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mobile-table__row">
+                <h3 class="mobile-table__feature | xs-heading">
+                  Embedding Custom Content
+                </h3>
+                <div class="mobile-table__data">
+                  <div></div>
+                  <div class="mobile-table__checked">
+                    <span class="sr-only">checked</span>
+                  </div>
+                  <div class="mobile-table__checked">
+                    <span class="sr-only">checked</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mobile-table__row">
+                <h3 class="mobile-table__feature | xs-heading">
+                  Customize Metadata
+                </h3>
+                <div class="mobile-table__data">
+                  <div></div>
+                  <div class="mobile-table__checked">
+                    <span class="sr-only">checked</span>
+                  </div>
+                  <div class="mobile-table__checked">
+                    <span class="sr-only">checked</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mobile-table__row">
+                <h3 class="mobile-table__feature | xs-heading">
+                  Advanced Metrics
+                </h3>
+                <div class="mobile-table__data">
+                  <div></div>
+                  <div></div>
+                  <div class="mobile-table__checked">
+                    <span class="sr-only">checked</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mobile-table__row">
+                <h3 class="mobile-table__feature | xs-heading">
+                  Photo Downloads
+                </h3>
+                <div class="mobile-table__data">
+                  <div></div>
+                  <div></div>
+                  <div class="mobile-table__checked">
+                    <span class="sr-only">checked</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mobile-table__row">
+                <h3 class="mobile-table__feature | xs-heading">
+                  Search Engine Indexing
+                </h3>
+                <div class="mobile-table__data">
+                  <div></div>
+                  <div></div>
+                  <div class="mobile-table__checked">
+                    <span class="sr-only">checked</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mobile-table__row">
+                <h3 class="mobile-table__feature | xs-heading">
+                  Custom Analytics
+                </h3>
+                <div class="mobile-table__data">
+                  <div></div>
+                  <div></div>
+                  <div class="mobile-table__checked">
+                    <span class="sr-only">checked</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA section -->
+      <section class="cta">
+        <div class="container">
+          <h2 class="cta__heading | large-heading">
+            We're in beta. Get your invite today!
+          </h2>
+          <a
+            href="#"
+            class="footer__cta | button button--text button--text-white"
+          >
+            <span>Get an invite</span>
+            <img src="/images/shared/desktop/arrow-white.svg" alt="" />
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="container | footer__container">
+        <a href="/index.html" class="footer__logo">
+          <img src="/images/shared/desktop/logo-white.svg" alt="Photosnap" />
+        </a>
+        <ul role="list" class="footer__socials">
+          <li>
+            <a href="#">
+              <img src="/images/shared/desktop/facebook.svg" alt="facebook" />
+              <span class="sr-only">facebbok</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="/images/shared/desktop/youtube.svg" alt="youtube" />
+              <span class="sr-only">youtube</span>
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              ><img src="/images/shared/desktop/twitter.svg" alt="twitter" />
+              <span class="sr-only">twitter</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                src="/images/shared/desktop/pinterest.svg"
+                alt="pinterest"
+              />
+              <span class="sr-only">pinterest</span></a
+            >
+          </li>
+          <li>
+            <a href="@"
+              ><img
+                src="/images/shared/desktop/instagram.svg"
+                alt="instagram"
+              />
+              <span class="sr-only">instagram</span></a
+            >
+          </li>
+        </ul>
+        <nav class="footer__navigation">
+          <ul role="list">
+            <li>
+              <a
+                href="/index.html"
+                class="button button--text button--text-white"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="/stories.html"
+                class="button button--text button--text-white"
+                >Stories</a
+              >
+            </li>
+            <li>
+              <a
+                href="/features.html"
+                class="button button--text button--text-white"
+                >features</a
+              >
+            </li>
+            <li>
+              <a
+                href="/pricing.html"
+                class="button button--text button--text-white"
+              >
+                Pricing</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <a
+          href="#"
+          class="footer__cta | button button--text button--text-white"
+        >
+          <span>Get an invite</span>
+          <img src="/images/shared/desktop/arrow-white.svg" alt="" />
+        </a>
+
+        <p class="footer__copyright">
+          <small>Copyright 2019. All Rights Reserved</small>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

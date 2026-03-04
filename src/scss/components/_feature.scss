@@ -1,0 +1,19 @@
+@use '../base/mixins' as *;
+
+.feature {
+  @include flex-center;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+
+  p {
+    max-width: 45ch;
+    opacity: 60%;
+  }
+
+  &__icon {
+    width: 72px;
+    height: 72px;
+    @include flex-center;
+  }
+}

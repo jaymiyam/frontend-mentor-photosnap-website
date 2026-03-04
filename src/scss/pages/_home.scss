@@ -1,0 +1,42 @@
+@use '../base/mixins' as *;
+@use '../base/variables' as *;
+
+.home-features {
+  padding-block: 7.5rem;
+  .container {
+    @include flex-center;
+    gap: 2rem;
+  }
+}
+
+.home-stories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 50;
+}
+
+@include respond($breakpoint-tablet) {
+  .home-stories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home-features {
+    .container {
+      flex-direction: column;
+      gap: 3rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .home-stories {
+    grid-template-columns: auto;
+  }
+}

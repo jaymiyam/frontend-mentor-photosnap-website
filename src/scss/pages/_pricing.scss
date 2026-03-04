@@ -1,0 +1,143 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.cards-wrapper {
+  @include flex-center;
+  gap: 2rem;
+}
+
+.toggle {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  background: none;
+  border: none;
+
+  &__wrapper {
+    @include flex-center;
+    gap: 2rem;
+    padding-block: 7.5rem 3rem;
+  }
+
+  &__track {
+    position: relative;
+    width: 4rem;
+    height: 2rem;
+    background: $color-grey;
+    border-radius: 999px;
+    transition: background 0.3s ease;
+  }
+
+  &__thumb {
+    position: absolute;
+    top: 0.25rem;
+    left: 0.25rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: $color-black;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+}
+
+.toggle[aria-pressed='true'] .toggle__track {
+  background: $color-black;
+}
+
+.toggle[aria-pressed='true'] .toggle__thumb {
+  transform: translateX(2rem);
+  background-color: $color-white;
+}
+
+.compare {
+  padding-block: 10rem;
+
+  .large-heading {
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+}
+
+.table {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 750px;
+  border-collapse: collapse;
+  text-transform: uppercase;
+
+  thead th {
+    border-bottom: 1px solid black;
+    padding-bottom: 1.5rem;
+  }
+
+  tbody td {
+    border-bottom: 1px solid $color-grey;
+    padding-block: 1.5rem;
+  }
+
+  &__index-column {
+    text-align: left;
+  }
+
+  &__checked {
+    background-image: url('/images/pricing/desktop/check.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+  }
+}
+
+.mobile-table {
+  display: none;
+  margin-inline: auto;
+  text-transform: uppercase;
+}
+
+@include respond($breakpoint-tablet) {
+  .cards-wrapper {
+    flex-direction: column;
+  }
+}
+
+@include respond($breakpoint-phone) {
+  .table {
+    display: none;
+  }
+
+  .mobile-table {
+    display: block;
+
+    &__head {
+      border-bottom: 1px solid black;
+      padding-bottom: 1.5rem;
+      text-align: left;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__row {
+      border-bottom: 1px solid $color-grey;
+      padding-block: 1.5rem;
+    }
+
+    &__data {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 1rem;
+    }
+
+    &__feature {
+      text-transform: uppercase;
+    }
+
+    &__checked {
+      width: 16px;
+      height: 16px;
+      background-image: url('/images/pricing/desktop/check.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 16px;
+    }
+  }
+}

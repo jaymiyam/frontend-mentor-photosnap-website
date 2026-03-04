@@ -1,0 +1,48 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.cta {
+  position: relative;
+  padding-block: 4.5rem;
+  background-image: url('/images/shared/desktop/bg-beta.jpg');
+  color: $color-white;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__heading {
+    max-width: 16ch;
+  }
+
+  &::before {
+    content: '';
+    width: 6px;
+    height: 100%;
+    background: $color-gradient;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+@include respond($breakpoint-phone) {
+  .cta {
+    padding: 4rem 2rem;
+
+    .container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 2rem;
+      margin-inline: 0;
+    }
+
+    &::before {
+      width: 30%;
+      height: 6px;
+    }
+  }
+}

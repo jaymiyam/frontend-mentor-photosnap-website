@@ -1,0 +1,34 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.features-grid {
+  padding-block: 10rem;
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6.5rem 2rem;
+  }
+}
+
+@include respond($breakpoint-tablet) {
+  .features-grid {
+    padding-block: 7rem;
+
+    .container {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4.5rem 2rem;
+    }
+  }
+}
+
+@include respond($breakpoint-phone) {
+  .features-grid {
+    padding-block: 4rem;
+
+    .container {
+      grid-template-columns: unset;
+      gap: 2rem;
+    }
+  }
+}

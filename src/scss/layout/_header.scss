@@ -1,0 +1,90 @@
+@use '../base/mixins' as *;
+@use '../base/variables' as *;
+
+.header {
+  background-color: $color-white;
+  position: relative;
+  padding-block: 1rem;
+  z-index: 100;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__cta {
+      display: block;
+
+      @include respond($breakpoint-tablet) {
+        display: none;
+      }
+    }
+  }
+}
+
+.navigation {
+  display: block;
+
+  ul {
+    @include flex-center;
+    gap: 2rem;
+  }
+
+  @include respond($breakpoint-tablet) {
+    display: none;
+  }
+}
+
+.mobile-nav-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+
+  width: 1.5rem;
+  aspect-ratio: 1;
+  background-image: url('/images/shared/mobile/menu.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &[aria-expanded='true'] {
+    background-image: url('/images/shared/mobile/close.svg');
+  }
+
+  @include respond($breakpoint-tablet) {
+    display: block;
+  }
+}
+
+.mobile-navigation {
+  &__wrapper {
+    display: none;
+
+    position: absolute;
+    z-index: 999;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: $color-white;
+    padding: 2rem;
+
+    &[data-mobile-show] {
+      @include respond($breakpoint-tablet) {
+        display: block;
+      }
+    }
+  }
+
+  ul {
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+  }
+
+  &__divider {
+    border: 0.5px solid #979797;
+    margin: 1rem 0;
+  }
+}

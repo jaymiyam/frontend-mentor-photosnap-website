@@ -1,0 +1,73 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.stories-hero {
+  position: relative;
+  color: $color-white;
+  display: flex;
+  align-items: center;
+  padding-block: 7.5rem;
+  background-image: url('/images/stories/desktop/moon-of-appalacia.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__mobile-image {
+    display: none;
+  }
+
+  &__text {
+    // position: absolute;
+    max-width: 380px;
+    margin-left: 7rem;
+    display: grid;
+    gap: 1.5rem;
+
+    small {
+      font-weight: normal;
+    }
+
+    p {
+      opacity: 60%;
+    }
+
+    &__date {
+      margin-right: 0.5rem;
+      opacity: 60%;
+    }
+  }
+}
+
+@include respond($breakpoint-tablet) {
+  .stories-hero {
+    background-image: url('/images/stories/tablet/moon-of-appalacia.jpg');
+
+    &__text {
+      margin-left: 2.5rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .stories-hero {
+    background-image: unset;
+    display: block;
+    padding: 0;
+
+    &__mobile-image {
+      display: block;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__text {
+      background-color: $color-black;
+      margin-left: 0;
+      padding: 3rem 2rem;
+      max-width: 100%;
+    }
+  }
+}

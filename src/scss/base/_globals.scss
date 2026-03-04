@@ -1,0 +1,79 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+body {
+  background-color: $color-white;
+  color: $color-black;
+  font-family: 'DM Sans', sans-serif;
+  font-size: $fs-body;
+  font-weight: bold;
+  line-height: 25px;
+  overflow-x: hidden;
+}
+
+p {
+  font-weight: normal;
+}
+
+.large-heading {
+  font-size: $fs-heading-large;
+  line-height: 48px;
+  letter-spacing: 4.17px;
+  text-transform: uppercase;
+}
+
+.medium-heading {
+  font-size: $fs-heading-medium;
+  line-height: 25px;
+}
+
+.small-heading {
+  font-size: $fs-heading-small;
+  line-height: 25px;
+}
+
+.xs-heading {
+  font-size: $fs-heading-xs;
+  line-height: 16px;
+  letter-spacing: 2px;
+
+  &__uppercase {
+    text-transform: uppercase;
+  }
+}
+
+// utilities
+
+.container {
+  width: min(1110px, 100% - 4rem);
+  margin-inline: auto;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px; /* Negative margin to remove the 1px footprint */
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0); /* Deprecated but used for older browsers */
+  clip-path: inset(50%); /* Modern alternative to clip */
+  white-space: nowrap; /* Prevents line breaks */
+  border: 0;
+}
+
+.desktop-hidden {
+  display: none;
+
+  @include respond($breakpoint-tablet) {
+    display: block;
+  }
+}
+
+.mobile-hidden {
+  display: block;
+
+  @include respond($breakpoint-tablet) {
+    display: none;
+  }
+}

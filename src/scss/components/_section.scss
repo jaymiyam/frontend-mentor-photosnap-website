@@ -1,0 +1,92 @@
+@use '../base/mixins' as *;
+@use '../base/variables' as *;
+
+.section {
+  display: flex;
+
+  &--hero {
+    background-color: $color-black;
+    color: $color-white;
+  }
+
+  &__text {
+    flex: 0 0 42%;
+    padding-inline: 7rem;
+    position: relative;
+    align-self: center;
+
+    &--hero::before {
+      content: '';
+      width: 6px;
+      height: 100%;
+      background: $color-gradient;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  &__image {
+    flex: 0 0 58%;
+    overflow: hidden;
+
+    picture {
+      width: 100%;
+      object-fit: cover;
+
+      img {
+        width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+
+  p {
+    opacity: 0.6;
+    margin-block: 1.5rem 3rem;
+  }
+}
+
+@include respond($breakpoint-large-desktop) {
+  .section {
+    &__text {
+      padding-inline: 3rem;
+    }
+  }
+}
+
+@include respond($breakpoint-desktop) {
+  .section {
+    max-height: 650px;
+
+    &__text {
+      flex: 0 0 60%;
+    }
+    &__image {
+      flex: 0 0 40%;
+    }
+  }
+}
+
+@include respond($breakpoint-phone) {
+  .section {
+    max-height: 9999px;
+    flex-direction: column;
+
+    &--hero,
+    &--designed {
+      flex-direction: column-reverse;
+    }
+
+    &__text {
+      padding: 4.5rem 2rem;
+
+      &--hero::before {
+        width: 30%;
+        height: 6px;
+      }
+    }
+  }
+}
